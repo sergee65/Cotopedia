@@ -1,0 +1,54 @@
+body{
+    font-family: Comic Sans Ms;
+    color: black;
+}
+::selection {
+background: #72727271;
+}
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+}
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+}
+.menu{
+    width: 95%;
+    height: 80px;
+    margin: auto;
+    border-radius: 25px;
+}
+.button{
+	width:17%;
+	height:auto;
+	color:black;
+	margin:10px;
+	padding:10px;
+	float:left;
+	cursor:pointer;
+    text-align: center;
+	border:3px solid black;
+	border-radius:15px;
+    margin-left: 4%;
+    transition:all 1.4s;
+    -webkit-text-stroke-width: 0.5px;
+}
+.button:hover{
+	background:white;
+	color:black;
+}

@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="clicker.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="button">
+            🐱 Главная
+        </div>
+
+        <div class="button" onclick="window.location.href='сайтики/Породы.html';">
+            🐈 Породы
+        </div>
+
+        <div class="button" onclick="window.location.href='сайтики/Питание.html';">
+            🐟 Чем кормить?
+        </div>
+
+        <div class="button" onclick="window.location.href='сайтики/Здоровье.html';">
+            🏥 Здоровье
+        </div>
+    </div>
+    
+    <div class="video-background">
+        <video autoplay muted loop id="myVideo">
+            <source src="Background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="clicker-widget" id="clickerWidget">
+        <div class="clicker-title">
+            🐾 СЧЁТЧИК КЛИКОВ 🐾
+        </div>
+        <div class="clicker-counter" id="clickCounter">0</div>
+        <button class="reset-button" id="resetButton">
+            🔄 СБРОС 🔄
+        </button>
+        <div class="clicker-info">
+            😺 Кликните в любом месте страницы 😸
+        </div>
+    </div>
+
+    <script src="clicker.js"></script>
+</body>
+</html>

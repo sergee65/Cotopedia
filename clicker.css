@@ -1,0 +1,161 @@
+.clicker-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, rgba(18, 32, 47, 0.95) 0%, rgba(26, 45, 61, 0.95) 100%);
+    border-radius: 30px 30px 30px 20px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 0 3px #2196F3, 0 0 0 6px #0D47A1;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Comic Sans MS', 'Segoe UI Emoji', cursive;
+    z-index: 9999;
+    min-width: 200px;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.clicker-widget:hover {
+    transform: scale(1.02);
+}
+
+.clicker-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #FFFFFF;
+}
+
+.clicker-counter {
+    font-size: 52px;
+    font-weight: bold;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-family: 'Comic Sans MS', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    color: #FFFFFF;
+}
+
+.reset-button {
+    background: #42A5F5;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: bold;
+    margin-top: 8px;
+    width: 100%;
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 3px 0 #0D47A1;
+}
+
+.reset-button:hover {
+    background: #2196F3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 0 #0D47A1;
+}
+
+.reset-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #0D47A1;
+}
+
+.clicker-info {
+    font-size: 11px;
+    margin-top: 10px;
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 5px;
+    color: #FFFFFF;
+}
+
+.clicker-widget::before,
+.clicker-widget::after {
+    content: "🐱";
+    position: absolute;
+    font-size: 30px;
+    top: -20px;
+}
+
+.clicker-widget::before {
+    left: -10px;
+    transform: rotate(-20deg);
+}
+
+.clicker-widget::after {
+    right: -10px;
+    transform: rotate(20deg);
+}
+
+@keyframes pawAnimation {
+    0% { transform: scale(0.3) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.2) rotate(20deg); opacity: 0.8; }
+    100% { transform: scale(1.5) rotate(40deg); opacity: 0; }
+}
+
+.click-effect {
+    position: fixed;
+    pointer-events: none;
+    font-size: 32px;
+    animation: pawAnimation 0.5s ease-out;
+    z-index: 10000;
+    filter: drop-shadow(0 0 5px rgb(37, 100, 236));
+}
+
+.cat-paw {
+    position: fixed;
+    pointer-events: none;
+    font-size: 24px;
+    opacity: 0;
+    animation: pawPrint 0.8s ease-out forwards;
+    z-index: 9998;
+}
+
+@keyframes pawPrint {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    20% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5) rotate(30deg);
+    }
+}
+
+@keyframes whisker {
+    0% { opacity: 0; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(10px); }
+    100% { opacity: 0; transform: translateX(20px); }
+}
+
+@keyframes purr {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.clicker-counter.purr {
+    animation: purr 0.3s ease-in-out;
+}
