@@ -1,0 +1,166 @@
+body{
+    font-family: Comic Sans Ms;
+    color: black;
+}
+::selection {
+    background: #72727271;
+}
+.menu{
+    width: 95%;
+    height: 80px;
+    margin: auto;
+    border-radius: 25px;
+    background: rgba(228, 185, 185, 0.445);
+}
+.button{
+    width:17%;
+    height:auto;
+    color:black;
+    margin:10px;
+    padding:10px;
+    float:left;
+    transition:all 1.4s;
+    cursor:pointer;
+    text-align: center;
+    border:3px solid black;
+    border-radius:15px;
+    margin-left: 4%;
+    -webkit-text-stroke-width: 0.5px;
+}
+.button:hover{
+    background:white;
+    color:black;
+}
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+}
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.back-button {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+.back-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: black;
+    -webkit-text-stroke-width: 0.5px;
+    text-decoration: none;
+    transition:all 1.4s;
+    border:3px solid black;
+    border-radius:15px;
+}
+.back-button a:hover {
+    background:white;
+    color:black;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: rgba(228, 185, 185, 0.3);
+    backdrop-filter: blur(4px);
+    border-radius: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.photo {
+    width: 60%;
+    margin: 0 auto 20px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.opisanie {
+    background: rgba(228, 185, 185, 0.6);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 25px;
+    border: 5px solid #4CAF50;
+	cursor:pointer;
+    transition: 0.3s;
+}
+.opisanie:hover {
+    transform: scale(1.01);
+    background: rgba(228, 185, 185, 0.7);
+}
+
+.opisanie h2 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    color: #2e7d32;
+    text-align: center;
+}
+
+.opisanie h3 {
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.opisanie p {
+    margin: 10px 0;
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.opisanie ul {
+    margin: 10px 0;
+    padding-left: 25px;
+}
+
+.opisanie li {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media screen and (max-width: 1080px) and (min-width: 769px) {
+    .photo {
+        width: 70%;
+    }
+    .main h1 {
+        font-size: 28px;
+    }
+}

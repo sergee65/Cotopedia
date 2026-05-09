@@ -1,0 +1,251 @@
+body{
+    font-family: Comic Sans Ms;
+    color: black;
+}
+::selection {
+background: #72727271;
+}
+.menu{
+    width: 95%;
+    height: 80px;
+    margin: auto;
+    border-radius: 25px;
+    background: rgba(228, 185, 185, 0.445);
+}
+.button{
+	width:17%;
+	height:auto;
+	color:black;
+	margin:10px;
+	padding:10px;
+	float:left;
+	transition:all 1.4s;
+	cursor:pointer;
+    text-align: center;
+	border:3px solid black;
+	border-radius:15px;
+    margin-left: 4%;
+    -webkit-text-stroke-width: 0.5px;
+}
+.button:hover{
+	background:white;
+	color:black;
+}
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+}
+#myVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    transform: translateX(-50%) translateY(-50%);
+}
+.container {
+    width: 90%;
+    height: 80%;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1080px) {
+   .container {
+      width: 90%;
+      height: 80%;
+      margin-top: 15%;
+   }
+}
+
+.box {
+    width: 18%;
+    height: 250px;
+    margin: 1%;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid pink;
+    animation: borderPulse 2s ease-in-out infinite
+}
+@keyframes borderPulse {
+    0% {
+        border-color: #ff69b4;
+        box-shadow: 0 0 5px #ff69b4;
+    }
+    50% {
+        border-color: #ff1493;
+        box-shadow: 0 0 15px #ff1493;
+    }
+    100% {
+        border-color: #ff69b4;
+        box-shadow: 0 0 5px #ff69b4;
+    }
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.box:hover::before {
+    filter: blur(5px);
+    transform: scale(1.1);
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.box:hover::after {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.box-content {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.box:hover .box-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.box-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    background: transparent;
+}
+
+@media screen and (max-width: 1080px) {
+   .box {
+    height: 200px;
+   }
+   
+   .box-content h3 {
+       font-size: 16px;
+   }
+}
+
+.box.а{
+    background-image: url("../img/АмериканскийКерл.jpg");
+}
+.box.б{
+    background-image: url("../img/Бенгальская.jpg");
+}
+.box.г{
+    background-image: url("../img/Гималайская.jpg");
+}
+.box.д{
+    background-image: url("../img/ДевонРекс.jpg");
+}
+.box.е{
+    background-image: url("../img/ЕгипетскаяМау.jpg");
+}
+.box.й{
+    background-image: url("../img/Йорк.jpg");
+}
+.box.к{
+    background-image: url("../img/Корат.jpg");
+}
+.box.л{
+    background-image: url("../img/Лаперм.jpg");
+}
+.box.м{
+    background-image: url("../img/МейнКун.jpg");
+}
+.box.н{
+    background-image: url("../img/Нибелунг.jpg");
+}
+.box.о{
+    background-image: url("../img/Ориентальная.jpg");
+}
+.box.п{
+    background-image: url("../img/Персидская.jpg");
+}
+.box.р{
+    background-image: url("../img/Рэгдолл.jpg");
+}
+.box.с{
+    background-image: url("../img/Сибирская.jpg");
+}
+.box.т{
+    background-image: url("../img/Тайская.jpg");
+}
+.box.у{
+    background-image: url("../img/УральскийРекс.jpg");
+}
+.box.ф{
+    background-image: url("../img/ФоринВайт.jpg");
+}
+.box.х{
+    background-image: url("../img/ХайлендФолд.jpg");
+}
+.box.ц{
+    background-image: url("../img/Цейлонская.jpg");
+}
+.box.ш{
+    background-image: url("../img/Шартрез.jpg");
+}
+.box.э{
+    background-image: url("../img/Эгейская.jpg");
+}
+.box.я{
+    background-image: url("../img/Яванез.jpg");
+}
